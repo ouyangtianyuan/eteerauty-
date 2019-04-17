@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=1.0,maximum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_846218_ertnm3ypp8h.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.5/css/swiper.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/Component.css" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <div class="content order-con home-con">
+        <div class="order-wrap mid-container">
+            <div class="cart-content order-content">
+                <div class="lef">
+                    <div class="logo"><a href=""><i class="iconfont icon-ete"></i></a></div>
+                    <div class="or-box"><span>OR</span></div>
+                    <div class="wait-box">
+                        <div class="tit"><img src="images/hots.png" alt="">An item you ordered is in high demand. No
+                            worries, we have reserved your order.</div>
+                        <div class="hots-box">
+                            Your order is reserved for <span class="wait-time" id="wait-time" data-time="1553481099286"></span>
+                            minutes!
+                        </div>
+                        <div class="paypal">
+                            <button class="rect-btn amz-btn paypal-btn">PayPal</button>
+                        </div>
+                    </div>
+                    <div class="form-box">
+                        <form action="" id="address-form">
+                            <div class="email-wrap">
+                                <div class="form-tit">Contact informtion<span class="req"><i>*</i> Required.</span></div>
+                                <div class="min-item">
+                                    <div class="inp-item">
+                                        <input type="text" class="inp icon-inp" name="email" placeholder="Example:name@domin.com" data-tit="email">
+                                        <span class="inp-icon"><i class="iconfont icon-ID"></i></span>
+                                    </div>
+                                    <p class="inp-sub-tit">You simply have to join our big family.</p>
+                                </div>
+                            </div>
+                            <div class="address-wrap">
+                                <div class="form-tit">Shopping address<span class="req"><i>*</i> Required.</span></div>
+                                <div class="row">
+                                    <div class="myAddress clear-both">
+                                        <div class="min-item col-6 col">
+                                            <div class="inp-tit">First name <span class="req"><i>*</i></span></div>
+                                            <div class="inp-item">
+                                                <input type="text" class="inp" name="f_name" data-tit="First name">
+                                            </div>
+                                        </div>
+                                        <div class="min-item col-6 col">
+                                            <div class="inp-tit">Last name <span class="req"><i>*</i></span></div>
+                                            <div class="inp-item">
+                                                <input type="text" class="inp" name="l_name" data-tit="Last name">
+                                            </div>
+                                        </div>
+                                        <div class="min-item col-6 col">
+                                            <div class="inp-tit">Country <span class="req"><i>*</i></span></div>
+                                            <div class="inp-item">
+                                                <select name="country" id="" class="inp" data-tit="Country">
+                                                    <option value="United States">United States</option>
+                                                    <option value="Usa">Usa</option>
+                                                    <option value="freakk">freakk</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="min-item col-6 col">
+                                            <div class="inp-tit">Zip Code<span class="req"><i>*</i></span></div>
+                                            <div class="inp-item">
+                                                <input type="text" class="inp" name="zip_code" id="zip_code" data-tit="Zip Code">
+                                            </div>
+                                        </div>
+                                        <div class="min-item col-6 col">
+                                            <div class="inp-tit">City <span class="req"><i>*</i></span></div>
+                                            <div class="inp-item">
+                                                <input type="text" class="inp inp-off" name="city" readonly
+                                                    autocomplete="off"  data-tit="City" data-verify>
+                                            </div>
+                                        </div>
+                                        <div class="min-item col-6 col">
+                                            <div class="inp-tit">State/Territor <span class="req"><i>*</i></span></div>
+                                            <div class="inp-item">
+                                                <input type="text" class="inp inp-off" name="state" readonly
+                                                    autocomplete="off" data-tit="State/Territor" data-verify>
+                                            </div>
+                                        </div>
+                                        <div class="min-item col-12 col">
+                                            <div class="inp-tit">Address Line 1 <span class="req"><i>*</i></span></div>
+                                            <div class="inp-item">
+                                                <input type="text" class="inp" name="address_1" data-tit="Address">
+                                            </div>
+                                        </div>
+                                        <div class="min-item col-12 col">
+                                            <div class="inp-tit">Address Line 2</div>
+                                            <div class="inp-item">
+                                                <input type="text" class="inp" name="address_2" data-tit="Address-2" data-verify ajax-url="">
+                                            </div>
+                                        </div>
+                                        <div class="min-item col-12 col">
+                                            <div class="inp-tit">Phone Number <span class="req"><i>*</i></span></div>
+                                            <div class="inp-item">
+                                                <input type="text" class="inp" name="phone" data-tit="Phone Number">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bill-box-wrap clear-both">
+                                        <div class="col-12 col bill-box">
+                                            <div class="tit">Billing address</div>
+                                            <div class="bill_check">
+                                                <div class="check-box active">
+                                                    <span class="check-box-icon"><i class="iconfont icon-Check"></i></span>
+                                                    <span class='tits'>same as shipping address</span>
+                                                    <input class="inp" type="hidden" name="bill" value="true" data-verify>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="myBillAddress clear-both">
+                                            <div class="min-item col-6 col">
+                                                <div class="inp-tit">First name <span class="req"><i>*</i></span></div>
+                                                <div class="inp-item">
+                                                    <input type="text" class="inp" name="f_name_bill" data-tit="first name in Billing address" data-verify>
+                                                </div>
+                                            </div>
+                                            <div class="min-item col-6 col">
+                                                <div class="inp-tit">Last name <span class="req"><i>*</i></span></div>
+                                                <div class="inp-item">
+                                                    <input type="text" class="inp" name="l_name_bill" data-tit="Last name in Billing address" data-verify>
+                                                </div>
+                                            </div>
+                                            <div class="min-item col-6 col">
+                                                <div class="inp-tit">Country <span class="req"><i>*</i></span></div>
+                                                <div class="inp-item">
+                                                    <select name="country_bill" id="country_bill" class="inp" data-tit="Country in Billing address" data-verify>
+                                                        <option value="United States">United States</option>
+                                                        <option value="Usa">Usa</option>
+                                                        <option value="freakk">freakk</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="min-item col-6 col">
+                                                <div class="inp-tit">Zip Code <span class="req"><i>*</i></span></div>
+                                                <div class="inp-item">
+                                                    <input type="text" class="inp" name="zip_code_bill" id="zip_code_bill" data-tit="Zip Code in Billing address" data-verify ajax-url="">
+                                                </div>
+                                            </div>
+                                            <div class="min-item col-6 col">
+                                                <div class="inp-tit">City <span class="req"><i>*</i></span></div>
+                                                <div class="inp-item">
+                                                    <input type="text" class="inp inp-off" name="city_bill" readonly
+                                                        autocomplete="off" data-tit="First City in Billing address" data-verify  id="city_bill">
+                                                </div>
+                                            </div>
+                                            <div class="min-item col-6 col">
+                                                <div class="inp-tit">State/Territor <span class="req"><i>*</i></span></div>
+                                                <div class="inp-item">
+                                                    <input type="text" class="inp inp-off" name="state_bill" readonly
+                                                        autocomplete="off" data-tit="State/Territor in Billing address" data-verify  id="state_bill">
+                                                </div>
+                                            </div>
+                                            <div class="min-item col-12 col">
+                                                <div class="inp-tit">Address Line 1 <span class="req"><i>*</i></span></div>
+                                                <div class="inp-item">
+                                                    <input type="text" class="inp" name="address_1_bill" data-tit="Address in Billing address" data-verify>
+                                                </div>
+                                            </div>
+                                            <div class="min-item col-12 col">
+                                                <div class="inp-tit">Address Line 2</div>
+                                                <div class="inp-item">
+                                                    <input type="text" class="inp" id="address_2_bill" name="address_2_bill" data-tit="Address in Billing address"  data-verify>
+                                                </div>
+                                            </div>
+                                            <div class="min-item col-12 col">
+                                                <div class="inp-tit">Phone Number <span class="req"><i>*</i></span></div>
+                                                <div class="inp-item">
+                                                    <input type="text" class="inp" name="phone_bill" data-tit="Phone Number in Billing address" data-verify>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <div class="continue-box">
+                                        <div class="min-item col-12 col">
+                                            <button class="sub-btn bold" ajax-url="">Continue to Payment</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="rig rig-fiex-box">
+                    <div class="pic-box"><img src="images/order-pic.png" alt=""></div>
+                    <div class="order-summary-box">
+                        <div class="tit">Order summary</div>
+                        <ul class="content-list">
+                            <li>
+                                <div class="lef">Subtotal</div>
+                                <div class="rig boldfont">$158.00</div>
+                            </li>
+                            <li>
+                                <div class="lef">Discount</div>
+                                <div class="rig">-$0.00</div>
+                            </li>
+                            <li>
+                                <div class="lef">Shopping</div>
+                                <div class="rig">$0.00</div>
+                            </li>
+                            <li>
+                                <div class="lef">Total</div>
+                                <div class="rig boldfont">$158.00</div>
+                            </li>
+                        </ul>
+                        <div class="min-item"><button class="max-btn rect-btn light-btn bold">PLACE ORDER</button></div>
+                    </div>
+                    <div class="order-item-box">
+                        <div class="order-item-tit">
+                            <div class="lef">items in order(3)</div>
+                            <div class="rig"><i class="fa fa-angle-up"></i></div>
+                        </div>
+                        <div class="order-summary-box order-list-wrap">
+                            <div class="view"><a href="">View basket</a></div>
+                            <ul class="order-item-list">
+                                <li>
+                                    <div class="img">
+                                        <a href=""><img src="images/p4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Lumos Smart Bulb - Tunable White</h3>
+                                        <p>Lumos Smart Bulb - Tunable White</p>
+                                        <div class="size">SIZE 0.12 oz ITEM 20031</div>
+                                        <p>COLOR:Pillow Talk</p>
+                                        <div class="qty-price">
+                                            <div>Qty:1</div>
+                                            <div>$36</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <a href=""><img src="images/p4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Lumos Smart Bulb - Tunable White</h3>
+                                        <p>Lumos Smart Bulb - Tunable White</p>
+                                        <div class="size">SIZE 0.12 oz ITEM 20031</div>
+                                        <p>COLOR:Pillow Talk</p>
+                                        <div class="qty-price">
+                                            <div>Qty:1</div>
+                                            <div>$36</div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img">
+                                        <a href=""><img src="images/p4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info">
+                                        <h3>Lumos Smart Bulb - Tunable White</h3>
+                                        <p>Lumos Smart Bulb - Tunable White</p>
+                                        <div class="size">SIZE 0.12 oz ITEM 20031</div>
+                                        <p>COLOR:Pillow Talk</p>
+                                        <div class="qty-price">
+                                            <div>Qty:1</div>
+                                            <div>$36</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="cart-bot">
+
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="layui/layui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.5/js/swiper.min.js"></script>
+    <script src="js/swiper.animate1.0.3.min.js"></script>
+    <script src="js/Component.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('#wait-time').waitTime({
+            duration: 600 /* 持续时间秒 */ ,
+            showDay: false,
+            endFn: function () {
+                $('.hots-box').html('Order reservation ended')
+            }
+        }); /* 倒计时 */
+        $('#address-form').myForm({
+            verify:{
+                email:[/^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/,'E-mail format is incorrect.'],
+            },
+            ajax: function (data, url) {
+                $.ajax({
+                    url: url,
+                    data: data,
+                    type: 'get',
+                    beforeSend: function () {
+                        $.myLoading();
+                    },
+                    success: function (data) {
+                        $.myLoading({
+                            static: 'hide'
+                        })
+                    }
+                })
+            }
+        }); /* 地址提交 */
+        $('#zip_code').add('#zip_code_bill').on('blur', function () {
+            var self = $(this);
+            var data = {zip_code:$(this).val()};
+            $.ajax({
+                url:self.attr('ajax-url'),
+                data: data,
+                type: 'get',
+                beforeSend: function () {
+                    $.myLoading();
+                },
+                success: function (data) {
+                    $.myLoading({
+                        static: 'hide'
+                    });
+
+                    /*  返回数据邮编错误执行 */
+                    $.myPrompt({
+                        msg: 'Zip code does not exist',
+                        callback: function () {
+                            self.val('');
+                        }
+                    })
+                }
+            });
+        });
+        $('.order-item-tit').on('click', function () {
+            $('.order-list-wrap').slideToggle();
+            $(this).toggleClass('active');
+        });
+        $('.bill_check .check-box').checkBox({
+            no:function(){
+                $('.myBillAddress').fadeIn();
+                $('.myBillAddress').find('.inp').attr('data-verify',null);
+                $('#country_bill').add('#city_bill').add('#state_bill').add('#address_2_bill').attr('data-verify',true);
+            },
+            yes:function(){
+                $('.myBillAddress').fadeOut();
+                $('.myBillAddress').find('.inp').attr('data-verify',true);
+            }
+        });
+    </script>
+</body>
+
+</html>
