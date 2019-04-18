@@ -110,28 +110,26 @@
         var type = options.type || 'hover'
         var animate = options.animate || 'slide'
         var li = $('.select-dropdown')
-
+        var len;
         if (type == 'hover') {
             self.hover(function () {
-                $(this).addClass('active');
-                if (animate == 'slide') {
-                    $(this).find('.select-dropdown-menu').stop().slideDown()
-                } else if (animate == 'fade') {
-                    $(this).find('.select-dropdown-menu').stop().fadeIn()
-                }
-                var dot = $(this).find('.dot');
-                if(dot.length){
-                    if(parseInt(dot.text()) <= 0 ){
-                        $(this).removeClass('active');
-                        $(this).find('.select-dropdown-menu').hide();
+                len = $(this).find('.select-dropdown-menu ul li').length;
+                if(len){
+                    $(this).addClass('active');
+                    if (animate == 'slide') {
+                        $(this).find('.select-dropdown-menu').stop().slideDown()
+                    } else if (animate == 'fade') {
+                        $(this).find('.select-dropdown-menu').stop().fadeIn()
                     }
                 }
             }, function () {
-                $(this).removeClass('active')
-                if (animate == 'slide') {
-                    $(this).find('.select-dropdown-menu').stop().slideUp()
-                } else if (animate == 'fade') {
-                    $(this).find('.select-dropdown-menu').stop().fadeOut()
+                if(len){
+                    $(this).removeClass('active')
+                    if (animate == 'slide') {
+                        $(this).find('.select-dropdown-menu').stop().slideUp()
+                    } else if (animate == 'fade') {
+                        $(this).find('.select-dropdown-menu').stop().fadeOut()
+                    }
                 }
             })
         } else if (type == 'click') {
@@ -139,39 +137,42 @@
             self.on('click', function (e) {
                 e.stopPropagation()
                 var select = $(this).find('.select-dropdown-menu')
-                if (animate == 'slide') {
-                    if (select.css('display') == 'none') {
-                        li.removeClass('active')
-                        var dot = $(this).find('.dot');
-                        selectAll.stop().slideUp()
-                        select.stop().slideDown()
-                        $(this).addClass('active');
-                        if(dot.length){
-                            if(parseInt(dot.text()) <= 0 ){
-                                $(this).removeClass('active');
-                                select.hide();
+                len = select.find('li').length;
+                if(len){
+                    if (animate == 'slide') {
+                        if (select.css('display') == 'none') {
+                            li.removeClass('active')
+                            var dot = $(this).find('.dot');
+                            selectAll.stop().slideUp()
+                            select.stop().slideDown()
+                            $(this).addClass('active');
+                            if(dot.length){
+                                if(parseInt(dot.text()) <= 0 ){
+                                    $(this).removeClass('active');
+                                    select.hide().attr('style','');
+                                }
                             }
+                        } else {
+                            $(this).removeClass('active')
+                            select.stop().slideUp()
                         }
-                    } else {
-                        $(this).removeClass('active')
-                        select.stop().slideUp()
-                    }
-                } else if (animate == 'fade') {
-                    if (select.css('display') == 'none') {
-                        li.removeClass('active')
-                        var dot = $(this).find('.dot');
-                        $(this).addClass('active');
-                        selectAll.fadeOut()
-                        select.stop().fadeIn()
-                        if(dot.length){
-                            if(parseInt(dot.text()) <= 0 ){
-                                $(this).removeClass('active');
-                                select.hide();
+                    } else if (animate == 'fade') {
+                        if (select.css('display') == 'none') {
+                            li.removeClass('active')
+                            var dot = $(this).find('.dot');
+                            $(this).addClass('active');
+                            selectAll.fadeOut()
+                            select.stop().fadeIn()
+                            if(dot.length){
+                                if(parseInt(dot.text()) <= 0 ){
+                                    $(this).removeClass('active');
+                                    select.hide();
+                                }
                             }
+                        } else {
+                            $(this).removeClass('active')
+                            select.stop().slideOut()
                         }
-                    } else {
-                        $(this).removeClass('active')
-                        select.stop().slideOut()
                     }
                 }
             })
