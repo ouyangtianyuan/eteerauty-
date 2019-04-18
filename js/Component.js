@@ -142,16 +142,9 @@
                     if (animate == 'slide') {
                         if (select.css('display') == 'none') {
                             li.removeClass('active')
-                            var dot = $(this).find('.dot');
                             selectAll.stop().slideUp()
                             select.stop().slideDown()
                             $(this).addClass('active');
-                            if(dot.length){
-                                if(parseInt(dot.text()) <= 0 ){
-                                    $(this).removeClass('active');
-                                    select.hide().attr('style','');
-                                }
-                            }
                         } else {
                             $(this).removeClass('active')
                             select.stop().slideUp()
@@ -159,16 +152,9 @@
                     } else if (animate == 'fade') {
                         if (select.css('display') == 'none') {
                             li.removeClass('active')
-                            var dot = $(this).find('.dot');
                             $(this).addClass('active');
                             selectAll.fadeOut()
                             select.stop().fadeIn()
-                            if(dot.length){
-                                if(parseInt(dot.text()) <= 0 ){
-                                    $(this).removeClass('active');
-                                    select.hide();
-                                }
-                            }
                         } else {
                             $(this).removeClass('active')
                             select.stop().slideOut()
