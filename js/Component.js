@@ -821,10 +821,13 @@
                 bigImg.add(zoomImg).attr('src', src).attr('data-src',src)
             }
         })
+        bigBox.on('mouseover',function(e){
+            maskW = initW / mult
+            maskH = initH / mult
+            mask.width(maskW).height(maskH);
+            mask.show()
+        })
         bigBox.on('mousemove', function (e) {
-                maskW = initW / mult
-                maskH = initH / mult
-                mask.width(maskW).height(maskH);
                 initW = bigImg.width()
                 initH = bigImg.height()
                 e.preventDefault();
@@ -837,7 +840,6 @@
                     width:initW +'px',
                     left:initW + 20 +'px'
                 })
-                mask.show()
                 page = retPage(e, $(this))
                 mask.css({
                     left: page.x + 'px',
